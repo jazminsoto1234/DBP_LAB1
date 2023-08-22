@@ -36,19 +36,30 @@ def addAnime():
 def UpdateAnime(id_Anime):
     for anime in dataAnime['anime']:
         if anime['id'] == id_Anime:
-            #anime['id'] = request.json['price']
+            #anime['id'] = request.json['id']
             anime['titulo'] = request.json['titulo']
             anime['puntaje'] = request.json['puntaje']
             anime['tipo'] = request.json['tipo']
             anime['season'] = request.json['season']
             anime['generos'] = request.json['generos']
         
-            with open(r"C:\Users\HP\Desktop\DBP\TAREAS\anime.json", "w") as json_file:
-                js.dump(dataAnime, json_file, indent=4)
+            with open(r"C:\Users\HP\Desktop\DBP\TAREAS\anime.json", "w") as archivo: #Cargando archivo de escritura
+                js.dump(dataAnime, archivo, indent=4) #Actualiza los datos
             return dataAnime
     return "No se encontro el anime :("
 
-    
+
+@app.route("/anime/{<int:id_Anime>}", methods= ['DELETE'])
+def deleteAnime(id_Anime):
+    for anime in dataAnime['anime']:
+        if anime['id'] == id_Anime:
+            dataAnime['anime'].remove(anime)
+            with open(r"C:\Users\HP\Desktop\DBP\TAREAS\anime.json", "w") as archivo: #Cargando archivo de escritura
+                js.dump(dataAnime, archivo, indent=4) #Actualiza los datos
+            
+            return dataAnime
+    return "No se encontro el anime :("
+
 
 if __name__ == "__main__":
     app.run(debug=True)
