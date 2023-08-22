@@ -1,5 +1,6 @@
 from flask import Flask, request
 import json as js
+from jsonmerge import merge
 
 app = Flask(__name__)
 dataAnime = js.load(open(r"C:\Users\HP\Desktop\DBP\TAREAS\anime.json"))
@@ -60,6 +61,22 @@ def deleteAnime(id_Anime):
             return dataAnime
     return "No se encontro el anime :("
 
+
+@app.route("/anime/{<int:id_Anime>}", methods= ['PATCH'])
+def patchAnime(id_Anime):
+    modifies = request.json
+    for anime in dataAnime['anime']:
+        if anime['id'] == id_Anime:
+            updated_anime = merge(anime, modifies)
+            print(updated_anime)
+
+            index = dataAnime['anime'].index(anime)
+            dataAnime['anime'][index] = updated_anime
+
+            with open(r"C:\Users\HP\Desktop\DBP\TAREAS\anime.json", "w") as archivo:
+                js.dump(dataAnime, archivo, indent=4)
+            return dataAnime
+    return "No se encontro el anime :("
 
 if __name__ == "__main__":
     app.run(debug=True)
