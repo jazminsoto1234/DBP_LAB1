@@ -29,7 +29,9 @@ def addAnime():
     }
     dataAnime['anime'].append(anime)
     with open(r"C:\Users\HP\Desktop\DBP\TAREAS\anime.json", 'w') as archivo: #Abriendo archivo json para escritura
-        js.dump(dataAnime, archivo, indent=4)
+        
+        js.dump(dataAnime, archivo, indent=4) #Realiza una escritura del archivo con el objeto que se añadio
+                                            #al archivo que deseamos ver los cambios
     
     return dataAnime
 
@@ -37,7 +39,6 @@ def addAnime():
 def UpdateAnime(id_Anime):
     for anime in dataAnime['anime']:
         if anime['id'] == id_Anime:
-            #anime['id'] = request.json['id']
             anime['titulo'] = request.json['titulo']
             anime['puntaje'] = request.json['puntaje']
             anime['tipo'] = request.json['tipo']
@@ -65,13 +66,11 @@ def deleteAnime(id_Anime):
 @app.route("/anime/{<int:id_Anime>}", methods= ['PATCH'])
 def patchAnime(id_Anime):
     modifies = request.json
-    for anime in dataAnime['anime']:
-        if anime['id'] == id_Anime:
-            mergeanime = merge(anime, modifies)
-            index = dataAnime['anime'].index(anime)
-            dataAnime['anime'][index] = mergeanime
+    for i in range (len(dataAnime['anime'])):
+        if dataAnime['anime'][i]['id'] == id_Anime:
+            dataAnime['anime'][i] = merge(dataAnime['anime'][i], modifies)
             with open(r"C:\Users\HP\Desktop\DBP\TAREAS\anime.json", "w") as archivo:
-                js.dump(dataAnime, archivo, indent=4) #Da el formato del json
+                js.dump(dataAnime, archivo, indent=4) #El indent da el formato del json
             return dataAnime
     return "No se encontro el anime :("
 
