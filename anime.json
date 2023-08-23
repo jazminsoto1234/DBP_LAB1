@@ -2,75 +2,87 @@
     "anime": [
     {   "id": 1, 
         "titulo": "Dragon Ball", 
-        "puntaje": 3, 
+        "puntaje": 8, 
         "tipo": "serie", 
-        "season": "winter", 
-        "generos": ["accion"]
-    },
-    {   "id": 1, 
-        "titulo": "Dragon Ball",   
-        "puntaje": 3, "tipo": "serie", 
-        "season": "winter", 
-        "generos": ["accion"]
-    }, 
-    {   "id": 1, 
-        "titulo": "Dragon Ball", 
-        "puntaje": 3, 
-        "tipo": "serie", 
-        "season": "winter", 
-        "generos": ["accion"]
+        "season": "spring", 
+        "generos": ["Action", "Adventure", "Comedy", "Fantasy", "Supernatural"]
     },
     {   "id": 2, 
-        "titulo": "Dragon Ball", 
-        "puntaje": 3, "tipo": "serie", 
-        "season": "winter", 
-        "generos": ["accion"]
+        "titulo": "Dragon Ball Super",   
+        "puntaje": 7, 
+        "tipo": "serie", 
+        "season": "summer", 
+        "generos": ["Action", "Adventure", "Comedy"]
+    }, 
+    {   "id": 3, 
+        "titulo": "Shingeki no Kyojin", 
+        "puntaje": 8, 
+        "tipo": "serie", 
+        "season": "spring", 
+        "generos": ["Action", "Drama", "Fantasy", "Mystery"]
+    },
+    {   "id": 4, 
+        "titulo": "ONE PIECE", 
+        "puntaje": 9,
+        "tipo": "serie", 
+        "season": "fall", 
+        "generos": ["Action", "Adventure", "Comedy", "Drama","Fantasy"]
     }, 
     {   "id": 5, 
-        "titulo": "Dragon Ball", 
-        "puntaje": 3, 
+        "titulo": "Death Note", 
+        "puntaje": 8, 
         "tipo": "serie", 
-        "season": "winter", 
-        "generos": ["accion"]
+        "season": "fall", 
+        "generos": ["Mystery", "Psychological", "Supernatural", "Thriller"]
     },
     {   "id": 6, 
-        "titulo": "Dragon Ball", 
-        "puntaje": 3, 
+        "titulo": "Kimetsu no Yaiba", 
+        "puntaje": 8, 
         "tipo": "serie", 
-        "season": "winter", 
-        "generos": ["accion"]
+        "season": "spring", 
+        "generos": ["Action", "Adventure", "Drama", "Fantasy", "Supernatural"]
     }, 
     {   "id": 7, 
-        "titulo": "Dragon Ball", 
-        "puntaje": 3, 
+        "titulo": "Kaguya-sama wa Kokurasetai?: Tensaitachi no Renai Zunousen", 
+        "puntaje": 9, 
         "tipo": "serie", 
-        "season": "winter", 
-        "generos": ["accion"]
+        "season": "spring", 
+        "generos": ["Comedy", "Psychological", "Romance", "Slice of Life"]
     },
     {   "id": 8, 
-        "titulo": "Dragon Ball", 
-        "puntaje": 3, "tipo": "serie", 
-        "season": "winter", 
-        "generos": ["accion"]
-    },
-    {   "id": 24, 
-        "titulo": "Dragon Ball", 
-        "puntaje": 5, 
+        "titulo": "Full Metal Alchemist: Brotherhood", 
+        "puntaje": 9, 
         "tipo": "serie", 
-        "season": "winter", 
-        "generos": ["Accion"]
+        "season": "spring", 
+        "generos": ["Action", "Adventure", "Drama", "Fantasy"]
     },
     {   "id": 9, 
-        "titulo": "Dragon Ballo", 
-        "puntaje": 5, "tipo": "serie", 
-        "season": "winter", 
-        "generos": ["Accion"]
+        "titulo": "One Punch Man", 
+        "puntaje": 8, 
+        "tipo": "serie", 
+        "season": "fall", 
+        "generos": ["Action", "Comedy", "Sci-Fi", "Supernatural"]
+    },
+    {   "id": 10, 
+        "titulo": "No Game No Life", 
+        "puntaje": 8, 
+        "tipo": "serie", 
+        "season": "spring", 
+        "generos": ["Adventure", "Comedy", "Ecchi", "Fantasy"]
     }, 
-    {   "id": 9, 
-        "titulo": "Dragon Ballo", 
-        "puntaje": 5, 
+    {   "id": 11, 
+        "titulo": "Azumanga Daioh", 
+        "puntaje": 8, 
         "tipo": "serie", 
-        "season": "winter", 
-        "generos": ["Accion"]}
+        "season": "spring", 
+        "generos": ["Comedy", "Slice of Life"]
+    },
+    {   "id": 12, 
+        "titulo": "Hokuto no Ken", 
+        "puntaje": 8, 
+        "tipo": "serie", 
+        "season": "fall", 
+        "generos": ["Action", "Drama", "Sci-Fi"]
+    }
     ]
 }
