@@ -3,7 +3,7 @@ import json as js
 from jsonmerge import merge
 
 app = Flask(__name__)
-dataAnime = js.load(open(r"C:\Users\HP\Desktop\DBP\TAREAS\anime.json"))
+dataAnime = js.load(open(r"C:\Users\HP\Desktop\DBP\TAREAS\anime.json")) #Colocar ruta absoluta del archivo
 
 @app.route("/anime")
 def getAnimes():
