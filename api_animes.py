@@ -67,14 +67,11 @@ def patchAnime(id_Anime):
     modifies = request.json
     for anime in dataAnime['anime']:
         if anime['id'] == id_Anime:
-            updated_anime = merge(anime, modifies)
-            print(updated_anime)
-
+            mergeanime = merge(anime, modifies)
             index = dataAnime['anime'].index(anime)
-            dataAnime['anime'][index] = updated_anime
-
+            dataAnime['anime'][index] = mergeanime
             with open(r"C:\Users\HP\Desktop\DBP\TAREAS\anime.json", "w") as archivo:
-                js.dump(dataAnime, archivo, indent=4)
+                js.dump(dataAnime, archivo, indent=4) #Da el formato del json
             return dataAnime
     return "No se encontro el anime :("
 
